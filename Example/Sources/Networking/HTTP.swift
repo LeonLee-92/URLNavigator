@@ -47,6 +47,7 @@ enum Result<T> {
   }
 }
 
+
 struct HTTP {
   static let baseURLString: String = "https://api.github.com"
 

@@ -2,12 +2,11 @@
 import UIKit
 
 public protocol NavigatorDelegate: class {
-  /// Returns whether the navigator should push the view controller or not. It returns `true` for
-  /// default.
+    /// 用于屏蔽一些不想 push 或 present 的操作
+    /// 代理使用此函数返回是否应该 Push ViewController，默认为 true
   func shouldPush(viewController: UIViewController, from: UINavigationControllerType) -> Bool
-
-  /// Returns whether the navigator should present the view controller or not. It returns `true`
-  /// for default.
+    /// 用于屏蔽一些不想 push 或 present 的操作
+    /// 代理使用此函数返回是否应该 PresentViewController，默认为 true
   func shouldPresent(viewController: UIViewController, from: UIViewControllerType) -> Bool
 }
 
